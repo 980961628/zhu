@@ -1,24 +1,27 @@
 <template>
-  <div id="app">
-    <router-view/>
+  <div id="admin">
+      前台首页
   </div>
 </template>
 
 <script>
 export default {
-  name: 'app',
+  name: 'admin',
   data(){
     return{
-
+      
     }
   },
   methods:{
-   
+    
   }
 }
 </script>
 
 <style  scope lang="stylus">
-  @import "./assets/stylus/reset"
-    
+    // max-width 1200px
+  .el-header
+    padding 0 
+  
+   
 </style>
