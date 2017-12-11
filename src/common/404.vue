@@ -1,24 +1,27 @@
 <template>
-  <div id="app">
-    <router-view/>
+  <div>
+      您的路由不正确
   </div>
 </template>
 
 <script>
 export default {
-  name: 'app',
+  name: 'admin',
   data(){
     return{
-
+      
     }
   },
   methods:{
-   
+    
   }
 }
 </script>
 
 <style  scope lang="stylus">
-  @import "./assets/stylus/reset"
-    
+    // max-width 1200px
+  .el-header
+    padding 0 
+  
+   
 </style>

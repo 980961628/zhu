@@ -1,24 +1,24 @@
 <template>
-  <div id="app">
-    <router-view/>
+  <div class="javascript">
+    javascript
   </div>
 </template>
 
 <script>
 export default {
-  name: 'app',
+  name: 'study',
   data(){
     return{
-
+      
     }
   },
   methods:{
-   
+    
   }
 }
 </script>
 
 <style  scope lang="stylus">
-  @import "./assets/stylus/reset"
-    
+   
+   
 </style>

@@ -1,24 +1,25 @@
 <template>
-  <div id="app">
-    <router-view/>
+  <div class="index">
+    Welcome
   </div>
 </template>
 
 <script>
 export default {
-  name: 'app',
+  name: 'study',
   data(){
     return{
-
+      
     }
   },
   methods:{
-   
+    
+    
   }
 }
 </script>
 
 <style  scope lang="stylus">
-  @import "./assets/stylus/reset"
-    
+   
+   
 </style>
