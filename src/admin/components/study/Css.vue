@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'study',
+  name: 'css',
   data(){
     return{
       
@@ -18,7 +18,7 @@ export default {
 }
 </script>
 
-<style  scope lang="stylus">
+<style  scoped lang="stylus">
    
    
 </style>

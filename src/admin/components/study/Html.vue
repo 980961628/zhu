@@ -6,10 +6,10 @@
 
 <script>
 export default {
-  name: 'study',
+  name: 'html',
   data(){
     return{
-      
+      input: ''
     }
   },
   methods:{
@@ -18,7 +18,7 @@ export default {
 }
 </script>
 
-<style  scope lang="stylus">
+<style  scoped lang="stylus">
    
    
 </style>

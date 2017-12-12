@@ -25,12 +25,12 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'index',
+      // name: 'index',
       component: Index
     },
     {
       path: '/admin',
-      name: 'admin',
+      // name: 'admin',
       component: Admin,
       children:[
         {
@@ -40,7 +40,7 @@ export default new Router({
         //学习园地
         {
           path: 'study',
-          name: 'study',
+          // name: 'study',
           component:Study,
           children:[
             {

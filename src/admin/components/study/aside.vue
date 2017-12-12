@@ -1,12 +1,12 @@
 <template>
-  <div class="study">
+  <div class="aside">
     左侧菜单
   </div>
 </template>
 
 <script>
 export default {
-  name: 'study',
+  name: 'aside',
   data(){
     return{
       
@@ -18,7 +18,7 @@ export default {
 }
 </script>
 
-<style  scope lang="stylus">
+<style  scoped lang="stylus">
    
    
 </style>

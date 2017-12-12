@@ -18,7 +18,7 @@ export default {
 }
 </script>
 
-<style  scope lang="stylus">
+<style lang="stylus">
   @import "./assets/stylus/reset"
     
 </style>

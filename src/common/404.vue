@@ -1,6 +1,6 @@
 <template>
   <div>
-      您的路由不正确
+      该模块暂时未开发
   </div>
 </template>
 
@@ -18,7 +18,7 @@ export default {
 }
 </script>
 
-<style  scope lang="stylus">
+<style  scoped lang="stylus">
     // max-width 1200px
   .el-header
     padding 0 

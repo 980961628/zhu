@@ -10,13 +10,23 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 Vue.use(ElementUI)
 
+//import axios 
+import axios from 'axios'
+Vue.prototype.$http = axios
+
+//import vuex
+
+import store from './store/index'
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
+  store,
   template: '<App/>',
+
   components: { App }
 })
 

@@ -6,7 +6,7 @@
         <el-menu mode="horizontal" default-active="study"   background-color="#545c64" text-color="#fff"
         active-text-color="#ffd04b" class="menu" @select="menuSelect">
           <el-menu-item index="study">学习园地</el-menu-item>
-          <el-menu-item index="shop">我的商城</el-menu-item>
+          <el-menu-item index="shop">我的作品</el-menu-item>
           <el-menu-item index="3">我的社区</el-menu-item>
           <el-menu-item index="4">网站设置</el-menu-item>
           <el-menu-item index="5">退出登录</el-menu-item>
@@ -35,14 +35,16 @@ export default {
   },
   methods:{
     menuSelect(key, keyPath) {
-      console.log(key, keyPath);
+      // console.log(key, keyPath);
       this.$router.push("/admin/"+key)
     },
   }
 }
 </script>
 
-<style  scope lang="stylus">
+<style  scoped lang="stylus">
+  body
+  background red
     // max-width 1200px
   .header
     .menu
