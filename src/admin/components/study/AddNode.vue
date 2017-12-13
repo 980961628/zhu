@@ -21,7 +21,7 @@
           </el-option-group>
         </el-select>
       </el-form-item>
-
+      
       <el-form-item label="文章内容" prop="content">
         <el-col :span="14">
           <vue-editor v-model="form.content"></vue-editor>
@@ -45,7 +45,6 @@ export default {
   data(){
     return{
       cate:"",
-      content: '<h1>Some initial content</h1>',
       category:[
         {
           label:"前端开发",
