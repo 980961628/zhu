@@ -14,8 +14,8 @@
         </el-col>
       </el-form-item>
 
-      <el-form-item label="分类" prop="cate">
-        <el-select placeholder="请选择分类" clearable v-model="form.cate">
+      <el-form-item label="分类" prop="cid">
+        <el-select placeholder="请选择分类" clearable v-model="form.cid">
           <el-option-group v-for="(group,index) in category" :label="group.label" :key="index">
             <el-option v-for="(option,index) in group.options" :key="index" :value="option.value" :label="option.label"></el-option>
           </el-option-group>
@@ -84,7 +84,7 @@ export default {
       ],
       form:{
         title:'',
-        cate:'',
+        cid:'',
         content:''
       },
       rules:{
@@ -110,14 +110,32 @@ export default {
   }),
   methods:{
     submit(){
-      console.log(this.$refs.form)
-      this.$store.commit('add')
-      console.log(this.$store.state.count)
-      this.$refs.form.validate((valid)=>{
-        console.log(this.form)
+      var that = this;
+      that.$store.commit('add')
+      that.$refs.form.validate((valid)=>{
+        console.log(that.form)
         if(valid){
           // alert('1')
-          console.log("1")
+          that.$http.post('http://zhu.admin.net:80/api/admin/study/node/add',that.form)
+          .then(function(res){
+            console.log(res)
+            if(res.data.code == 0){
+              that.$message({
+                message: res.data.msg,
+                type: 'success'
+              });
+              that.form={
+                title:'',
+                cid:'',
+                content:''
+              }
+            }else{
+              that.$message.error(res.data.msg);
+            }
+          })
+          .catch(function(res){
+            that.$message.error("网络错误");
+          })
         }else{
           // alert('2')
           console.log("2")
