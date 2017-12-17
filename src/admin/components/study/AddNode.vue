@@ -62,25 +62,7 @@ export default {
               label:"CSS",
             },
           ]
-        },
-        {
-          label:"后端开发",
-          options:[
-            {
-              value:"4",
-              label:"PHP",
-            },
-            {
-              value:"5",
-              label:"JAVA",
-            },
-            {
-              value:"6",
-              label:"MYSQL",
-            }
-          ]
-        },
-        
+        }
       ],
       form:{
         title:'',
@@ -92,7 +74,7 @@ export default {
           { required: true, message: '请输入文章标题', trigger: 'blur' },
           { max: 30, message: '长度在30个字符以内', trigger: 'blur' }
         ],
-        cate:[
+        cid:[
            { required: true, message: '请选择分类', trigger: 'blur' },
         ],
         content:[
@@ -104,11 +86,56 @@ export default {
   created(){
     console.log(this.$store.state.count)
   },
+  mounted(){
+    this._getCateList();
+  },
   computed:mapState({
     num:state=>state.count,
     name:state=>state.username
   }),
   methods:{
+    _getCateList:function(){
+      var that = this;
+      // console.log()
+      that.$http.post(that.$store.state.url+"admin/study/category/list",{type:1})
+      .then(function(res){
+        console.log(res)
+        if(res.data.code==0){
+          var category = [];
+          res.data.data.forEach(( item )=>{
+
+           
+
+            var options = [];
+            item.child_data.forEach((it)=>{
+              options.push({
+                value:it.id,
+                label:it.name
+              })
+            })
+            category.push({ 
+              label : item.name,
+              options:options
+            });
+        
+            
+          })
+          console.log(category)
+          
+          that.category = category;
+          // res.data.data.forEach(item => {
+          //     that.category.push({
+          //       label:item.name,
+          //       value:item.id
+          //     })
+          // });
+        }
+        // console.log(that.category)
+      })
+      .catch(function(res){
+        console.log(res)
+      })
+    },
     submit(){
       var that = this;
       that.$store.commit('add')

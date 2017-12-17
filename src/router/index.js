@@ -15,6 +15,10 @@ import Javascript from "@/admin/components/Study/Javascript"
 import Html from "@/admin/components/Study/Html"
 import Css from "@/admin/components/Study/Css"
 import AddNode from "@/admin/components/Study/AddNode"
+import AddCategory from "@/admin/components/Study/AddCategory"
+import CategoryList from "@/admin/components/Study/CategoryList"
+
+
 
 
 import Shop from "@/admin/pages/Shop"
@@ -72,6 +76,18 @@ export default new Router({
               name : 'add-node',
               component: AddNode
             },
+            {
+              path : 'category-add',
+              name : 'category-add',
+              component: AddCategory
+            },
+            {
+              path : 'category-list',
+              name : 'category-list',
+              component: CategoryList
+            },
+            
+            
 
           ]
         },
